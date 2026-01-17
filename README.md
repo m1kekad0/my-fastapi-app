@@ -3,6 +3,8 @@
 FastAPI を使用した Vercel デプロイ用のバックエンドアプリケーションです。
 パッケージ管理には [uv](https://github.com/astral-sh/uv) を使用しています。
 
+**デモ URL**: [https://my-fastapi-app-sigma.vercel.app/](https://my-fastapi-app-sigma.vercel.app/)
+
 ## 開発環境のセットアップ
 
 ```bash
