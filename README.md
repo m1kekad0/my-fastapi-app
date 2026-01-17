@@ -39,6 +39,12 @@ uv run ruff check --fix
 uv run ruff format
 ```
 
+## テストの実行
+
+```bash
+uv run pytest
+```
+
 ## デプロイ手順 (Vercel)
 
 Vercel は `pyproject.toml` を直接サポートしていないため、デプロイ前に `requirements.txt` を生成する必要があります。
@@ -52,6 +58,13 @@ uv add <package_name>
 
 # 2. requirements.txt の再生成 (重要)
 uv run python3 generate_requirements.py
+```
+
+### 3. テスト
+デプロイ前にテストが通ることを確認してください。
+
+```bash
+uv run pytest
 ```
 
 ### 2. デプロイの実行
@@ -72,4 +85,10 @@ git push
 - `generate_requirements.py`: `pyproject.toml` から `requirements.txt` を生成するスクリプト
 - `vercel.json`: Vercel のデプロイ・ルーティング設定
 - `pyproject.toml`: プロジェクト設定・依存関係管理
+- `tests/`: テストコード
 - `.gitmessage`: コミットメッセージのテンプレート
+- `LICENSE`: MIT ライセンス
+
+## ライセンス
+
+[MIT License](LICENSE)

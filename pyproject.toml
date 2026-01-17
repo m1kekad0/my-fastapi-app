@@ -16,7 +16,9 @@ build-backend = "hatchling.build"
 
 [dependency-groups]
 dev = [
+    "httpx>=0.28.1",
     "pre-commit>=4.5.1",
+    "pytest>=8.3.4",
     "ruff>=0.14.13",
     "toml>=0.10.2",
 ]
@@ -28,7 +30,7 @@ packages = ["api"]
 # コードの長さ制限
 line-length = 88
 # 対象とするPythonバージョン
-target-version = "py313"
+target-version = "py312"
 
 [tool.ruff.lint]
 # 有効にするルールのカテゴリ
