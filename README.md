@@ -15,6 +15,9 @@ uv python pin 3.12
 
 # 依存関係の同期
 uv sync
+
+# pre-commit の有効化 (コミット時に Ruff を自動実行)
+uv run pre-commit install
 ```
 
 ## ローカルでの実行

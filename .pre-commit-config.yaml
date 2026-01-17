@@ -1,0 +1,11 @@
+# .pre-commit-config.yaml
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version.
+    rev: v0.9.1
+    hooks:
+      # Linter を実行
+      - id: ruff
+        args: [ --fix ]
+      # Formatter を実行
+      - id: ruff-format
