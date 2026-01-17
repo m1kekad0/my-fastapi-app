@@ -4,10 +4,8 @@ version = "0.1.0"
 description = "FastAPI application for Vercel deployment"
 dependencies = [
     "fastapi>=0.115.0",
-    "uvicorn>=0.30.0",
-    "toml>=0.10.2",
 ]
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 
 [tool.uv]
 managed = true
@@ -19,6 +17,7 @@ build-backend = "hatchling.build"
 [dependency-groups]
 dev = [
     "ruff>=0.14.13",
+    "toml>=0.10.2",
 ]
 
 [tool.hatch.build.targets.wheel]
