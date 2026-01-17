@@ -16,5 +16,28 @@ managed = true
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+[dependency-groups]
+dev = [
+    "ruff>=0.14.13",
+]
+
 [tool.hatch.build.targets.wheel]
 packages = ["api"]
+
+[tool.ruff]
+# コードの長さ制限
+line-length = 88
+# 対象とするPythonバージョン
+target-version = "py313"
+
+[tool.ruff.lint]
+# 有効にするルールのカテゴリ
+# E: pycodestyle エラー, F: Pyflakes, I: isort (インポート順), W: pycodestyle 警告, UP: pyupgrade
+select = ["E", "F", "I", "W", "UP"]
+fixable = ["ALL"]
+
+[tool.ruff.format]
+# ダブルクォートを使用
+quote-style = "double"
+# インデントにスペースを使用
+indent-style = "space"
